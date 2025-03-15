@@ -26,7 +26,7 @@ section {
   max-height: 90vh;
   max-width: 650px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,11 +34,14 @@ section {
 .photo {
   overflow: hidden;
   max-height: 30vh;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .article {
   display: flex;
   flex-direction: column;
-  padding: 25px;
+  padding: 30px;
   justify-content: space-between;
   gap: 15px;
 }
@@ -46,10 +49,13 @@ section {
   font-size: 1.5em;
   color: hsl(217, 19%, 35%);
   margin: 0.7em 0 0.5em 0;
+  line-height: 1.5;
 }
 .text {
   color: hsl(214, 17%, 51%);
   margin-bottom: 1.5em;
+  font-size: 1.3em;
+  line-height: 1.5;
 }
 .author {
   display: flex;
@@ -73,6 +79,29 @@ section {
 .authorInfo {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 60%;
+}
+.authorName {
+  font-size: 1.3em;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+.authorDate {
+  font-size: 1.1em;
+  color: hsl(212, 23%, 69%);
+}
+.share {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: hsl(210, 46%, 95%);
+}
+.share img {
+  width: 40%;
 }
