@@ -71,6 +71,10 @@ section {
   flex-direction: row;
   justify-content: space-between;
 }
+.author.active {
+  display: none;
+}
+
 .avatar {
   max-width: 50px;
   max-height: 50px;
@@ -79,6 +83,7 @@ section {
   justify-content: center;
   align-items: center;
 }
+
 .avatar img {
   width: 100%;
   height: auto;
@@ -113,13 +118,13 @@ section {
 }
 
 .share-popup {
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
-  height: 100%;
+  height: 10vh;
   background: hsl(217, 19%, 35%);
   color: white;
-  display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
   background-color: hsl(217, 19%, 35%);
@@ -128,9 +133,9 @@ section {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Kiedy `.active` zostanie dodane, element się pojawia */
 .share-popup.active {
   opacity: 1;
+  display: flex;
   pointer-events: auto; /* Pozwala na interakcję */
 }
 
@@ -148,5 +153,10 @@ section {
   }
   .authorInfo {
     width: 70%;
+  }
+  .share-popup {
+    flex-direction: column;
+    width: 30%;
+    min-height: 100%;
   }
 }
