@@ -22,6 +22,7 @@ body {
 }
 
 section {
+  position: relative;
   width: 85vw;
   max-height: 90vh;
   max-width: 650px;
@@ -61,7 +62,6 @@ section {
 }
 .text {
   color: hsl(214, 17%, 51%);
-  margin-bottom: 1.5em;
   font-size: 1.2em;
   line-height: 1.5;
   font-weight: 400;
@@ -70,6 +70,8 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 6vh;
+  margin-top: 1.5em;
 }
 .author.active {
   display: none;
@@ -118,27 +120,42 @@ section {
 }
 
 .share-popup {
-  left: 0;
-  top: 0;
+  position: absolute;
   width: 100%;
-  height: 10vh;
+  height: auto;
   background: hsl(217, 19%, 35%);
   color: white;
   display: none;
   justify-content: space-around;
   align-items: center;
-  background-color: hsl(217, 19%, 35%);
+  padding: 15px;
   opacity: 0;
-  pointer-events: none; /* Zapobiega klikaniu */
+  pointer-events: none;
   transition: opacity 0.3s ease-in-out;
+}
+#shareOff {
+  width: 40px;
+  height: 40px;
 }
 
 .share-popup.active {
-  opacity: 1;
   display: flex;
-  pointer-events: auto; /* Pozwala na interakcję */
+  opacity: 1;
+  pointer-events: auto;
 }
 
+.socialMedia {
+  display: flex;
+  gap: 15px;
+}
+.socialMedia img {
+  width: 30px;
+}
+.shareText {
+  letter-spacing: 5px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
 .share img {
   width: 40%;
 }
@@ -151,12 +168,33 @@ section {
   .photo {
     max-height: none;
   }
+
+  .author.active {
+    display: flex;
+  }
   .authorInfo {
     width: 70%;
   }
+
   .share-popup {
-    flex-direction: column;
-    width: 30%;
-    min-height: 100%;
+    width: 350px;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    transform: 50%;
+    background: hsl(217, 19%, 35%);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .share-popup.active {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
