@@ -120,7 +120,6 @@ section {
 }
 
 .share-popup {
-  position: absolute;
   width: 100%;
   height: auto;
   background: hsl(217, 19%, 35%);
@@ -128,14 +127,10 @@ section {
   display: none;
   justify-content: space-around;
   align-items: center;
-  padding: 15px;
+  padding: 25px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
-}
-#shareOff {
-  width: 40px;
-  height: 40px;
 }
 
 .share-popup.active {
@@ -143,7 +138,10 @@ section {
   opacity: 1;
   pointer-events: auto;
 }
-
+#shareOff {
+  width: 40px;
+  height: 40px;
+}
 .socialMedia {
   display: flex;
   gap: 15px;
